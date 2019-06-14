@@ -1,0 +1,69 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.top-bar__logo {
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  background-image: url(./assets/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 24px;
+  width: 171px;
+  float: left;
+}
+
+.top-bar__button {
+  margin-top: 18px;
+  margin-right: 25px;
+  font-size: 13px;
+  color: #ffffff;
+  letter-spacing: 0;
+  background-color: #007dff;
+  border-radius: 4px;
+  padding: 10px 16px;
+  width: 140px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  border: none;
+  float: right;
+}
+
+.top-bar__scale {
+  background-color: #fff;
+  z-index: 1;
+  height: 46px;
+  border-bottom: 1px solid #e9ecef;
+  box-shadow: 0 -1px 0 0 #e9ecef;
+  min-width: 1800px;
+  position: sticky;
+  top: 74px;
+  left: 0;
+}
+
+.schedule {
+  margin-top: 78px;
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  left: 0;
+  background-color: blue;
+}
+
+.schedule__timelapse {
+  background-color: green;
+  height: 900px;
+  min-width: 1600px;
+  margin-left: 180px;
+}
