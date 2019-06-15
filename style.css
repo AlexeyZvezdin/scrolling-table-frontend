@@ -1,6 +1,7 @@
-.main-container {
+#main-container {
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 }
 
 .top-bar__header {
@@ -48,7 +49,7 @@
   height: 46px;
   border-bottom: 1px solid #e9ecef;
   box-shadow: 0 -1px 0 0 #e9ecef;
-  min-width: 1800px;
+  min-width: 800px;
   position: sticky;
   top: 74px;
   left: 0;
@@ -126,20 +127,22 @@
 
 /* MAIN SCHEDULE PART */
 
-.schedule {
+#schedule {
   display: flex;
   flex-direction: row;
+  margin-top: 74px;
+  /* overflow: scroll; */
 }
 
 .schedule__rooms {
+  border-right: 2px solid #e9ecef;
   min-width: 245px;
   display: block;
   white-space: nowrap;
   flex-direction: column;
-  margin-top: 74px;
   box-sizing: border-box;
   padding-left: 24px;
-  position: sticky;
+  /* position: sticky; */
   left: 0;
   top: 0;
   -webkit-text-size-adjust: none;
@@ -172,11 +175,22 @@
 .is_busy {
   color: #858e98;
 }
+
+.aside--float {
+  position: fixed;
+  left: 0;
+
+  visibility: hidden;
+}
+
+.aside--float .room > p:first-child {
+  display: inline-block;
+  visibility: visible;
+}
 /* SCHEDULE TIMELAPSE */
 
 .schedule__timelapse {
-  background-color: green;
   height: 900px;
-  overflow: scroll;
-  min-width: 1600px;
+  min-width: 800px;
+  background: #f6f7f9;
 }
