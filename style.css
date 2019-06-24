@@ -131,11 +131,11 @@
 
 /* MAIN SCHEDULE PART */
 
-#schedule {
+/* #schedule {
   display: flex;
   flex-direction: row;
-  /* overflow: scroll; */
-}
+  overflow: scroll; // Это было сперва закоменчено
+} */
 
 .schedule__rooms {
   border-right: 2px solid #e9ecef;
@@ -145,9 +145,7 @@
   flex-direction: column;
   box-sizing: border-box;
   padding-left: 24px;
-  /* position: sticky; */
-  left: 0;
-  top: 0;
+
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
@@ -164,13 +162,19 @@
 }
 
 .room {
-  padding-top: 15px;
+  padding-top: 16px;
   font-size: 1.1em;
   color: #000000;
   /* line-height: 17px; */
+  display: flex;
+  flex-direction: row;
 }
 
-.room > p:last-child {
+.room > div:first-child {
+  min-width: 220px;
+}
+
+.room > div > p:last-child {
   padding-top: 3px;
   font-size: 0.9em;
 }
@@ -180,14 +184,22 @@
 }
 
 .aside--float {
-  position: fixed;
-  top: 104px;
+  position: sticky;
+  left: 0;
+  /* top: 104px; */
 
   visibility: hidden;
 }
+.aside--float .room > div:first-child {
+  position: absolute;
+}
 
-.aside--float .room > p:first-child {
+.aside--float .room > div > p:first-child {
   display: inline-block;
+  visibility: visible;
+}
+
+.aside--float .room > .schedule__timelapse {
   visibility: visible;
 }
 
@@ -198,7 +210,7 @@
 /* SCHEDULE TIMELAPSE */
 
 .schedule__timelapse {
-  height: 900px;
+  height: 28px;
   min-width: 800px;
-  background: #f6f7f9;
+  background: #f2f2;
 }
